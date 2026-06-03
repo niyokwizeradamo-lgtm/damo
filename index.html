@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Damo Search</title>
+</head>
+<body>
+
+<h1>Damo Search</h1>
+
+<input type="text" id="searchBox" placeholder="Shakisha kuri Damo">
+
+<br><br>
+
+<button onclick="search()">Shakisha</button>
+
+<p id="result"></p>
+
+<script>
+function search() {
+  let q = document.getElementById("searchBox").value.toLowerCase();
+  let result = document.getElementById("result");
+
+  let data = {
+    "rwanda": "U Rwanda ni igihugu cyo muri Afurika y'Uburasirazuba.",
+    "kigali": "Kigali ni umurwa mukuru w'u Rwanda.",
+    "president kagame": "Paul Kagame ni Perezida w'u Rwanda.",
+    "damo": "Murakaza neza kuri Damo Search."
+  };
+
+  if (data[q]) {
+    result.innerText = data[q];
+  } else {
+    result.innerText = "Nta gisubizo kibonetse.";
+  }
+}
+</script>
+
+</body>
+</html>
